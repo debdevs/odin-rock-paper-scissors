@@ -65,6 +65,11 @@ function game() {
     console.log(player, computer, winner);
     console.log('Player Wins: ' + player_wins);
     console.log('Computer Wins: ' + computer_wins);
+    if (i >= 4 && player_wins > computer_wins) {
+      console.log('ROUND WINNER IS PLAYER');
+    } else if (i >= 4 && player_wins < computer_wins) {
+      console.log('ROUND WINNER IS COMPUTER');
+    }
   }
   return winner;
 }
