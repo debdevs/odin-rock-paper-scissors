@@ -43,6 +43,8 @@ function playRound(playerSelection1) {
   document.getElementById("pc").innerHTML = "Rock";
 
 
+
+
   const container = document.querySelector('#container');
   const player_choice = document.createElement('div');
   player_choice.classList.add('player_choice');
@@ -64,6 +66,21 @@ function playRound(playerSelection1) {
   
   return [playerSelection1, computerSelection, winner];
 }
+
+
+
+const buttons = document.querySelectorAll('button');
+
+ 
+buttons.forEach((button) => {
+
+
+  button.addEventListener('click', () => {
+    alert(button.id);
+    playRound(button.id)
+  });
+});
+
 
 
 // function game() {
